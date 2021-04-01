@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_large_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/im_school" />
+
+    <TextView
+        style="@style/subHeaderStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginStart="@dimen/base_margin"
+        android:drawableStart="@drawable/ic_pin"
+        android:drawablePadding="@dimen/base_margin"
+        android:text="@string/location" />
+
+    <TextView
+        style="@style/subHeaderStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginStart="@dimen/base_margin"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="@dimen/base_margin"
+        android:text="@string/telephone" />
+
+    <TextView
+        style="@style/subHeaderStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginStart="@dimen/base_margin"
+        android:drawableStart="@drawable/ic_fax"
+        android:drawablePadding="@dimen/base_margin"
+        android:text="@string/fax" />
+
+    <TextView
+        style="@style/subHeaderStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:layout_marginStart="@dimen/base_margin"
+        android:drawableStart="@drawable/ic_mail"
+        android:drawablePadding="@dimen/base_margin"
+        android:text="@string/marketing" />
+
+    <TextView
+        style="@style/subHeaderStyle"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="64dp"
+        android:textColor="@android:color/darker_gray"
+        android:text="@string/version" />
+</LinearLayout>

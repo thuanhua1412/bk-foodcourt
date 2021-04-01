@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.bkmerchant.home.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/welcome_text"
+                    style="@style/titleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:text="@{@string/welcome_text(viewModel.userName)}"
+                    android:textColor="@android:color/tab_indicator_text"
+                    tools:text="Welcome" />
+
+                <RelativeLayout
+                    android:id="@+id/store_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/click_selector"
+                    android:paddingStart="@dimen/base_margin"
+                    android:paddingTop="@dimen/fab_margin"
+                    android:paddingEnd="@dimen/base_margin"
+                    android:paddingBottom="@dimen/fab_margin">
+
+                    <ImageView
+                        android:id="@+id/store_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        app:imageUrl="@{viewModel.currentStore.imageUrl}" />
+
+                    <TextView
+                        android:id="@+id/store_name"
+                        style="@style/headerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/small_margin"
+                        android:layout_toEndOf="@id/store_image"
+                        android:text="@{viewModel.currentStore.name}"
+                        tools:text="Domino's Pizza" />
+
+                    <TextView
+                        android:id="@+id/store_rating"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/store_name"
+                        android:layout_alignStart="@id/store_name"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:drawableStart="@drawable/ic_star"
+                        android:drawablePadding="@dimen/small_margin"
+                        android:gravity="bottom"
+                        app:star_rating="@{viewModel.currentStore.starRating}"
+                        app:total_rating="@{viewModel.currentStore.totalRatings}"
+                        tools:text="4.7" />
+
+                    <TextView
+                        android:id="@+id/store_description"
+                        style="@style/textStyle"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/store_rating"
+                        android:layout_alignStart="@id/store_name"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:maxLines="2"
+                        android:text="@{viewModel.currentStore.description}"
+                        android:textColor="@android:color/tab_indicator_text"
+                        tools:text="Tiết kiệm đến 25%. Phù hợp  với nhóm từ 2-4 người. Pizza nướng thơm lừng ..." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/store_description"
+                        android:layout_alignStart="@id/store_name"
+                        android:paddingTop="@dimen/small_margin"
+                        android:text="@string/change_information"
+                        android:textColor="@color/colorBlue" />
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/corner_radius">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/small_margin">
+
+                        <ImageView
+                            android:id="@+id/icon_payment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:src="@drawable/ic_payment_24"
+                            android:tint="@android:color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/today_sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/base_margin"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/total_sales"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintStart_toEndOf="@id/icon_payment"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/currency"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintStart_toStartOf="@id/today_sale"
+                            app:layout_constraintTop_toBottomOf="@id/today_sale" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin"
+                            android:fontFamily="@font/roboto"
+                            android:text="1,350,000"
+                            android:textColor="@android:color/white"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@id/money"
+                            app:layout_constraintTop_toTopOf="@id/money"
+                            tools:text="1,350,000" />
+
+                        <TextView
+                            android:id="@+id/yesterday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/yesterday"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintStart_toStartOf="@id/yesterday_sale"
+                            app:layout_constraintTop_toTopOf="@id/today_sale" />
+
+                        <TextView
+                            android:id="@+id/yesterday_sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="VNĐ 1,250,000"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/money"
+                            tools:text="VNĐ 1,250,000" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="200 Orders Served"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="200 Orders Served" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:padding="@dimen/base_margin"
+                    app:alignmentMode="alignMargins"
+                    app:columnCount="3"
+                    app:orientation="horizontal"
+                    app:rowCount="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/order_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowWeight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_order"
+                            android:padding="@dimen/small_margin"
+                            android:text="@string/orders" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menu_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_margin"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowWeight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_menu"
+                            android:padding="@dimen/small_margin"
+                            android:text="@string/menu" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/promotion_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_margin"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowWeight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_megaphone"
+                            android:padding="@dimen/small_margin"
+                            android:text="@string/promotions" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/report_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/base_margin"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowWeight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_report"
+                            android:padding="@dimen/small_margin"
+                            android:text="@string/report" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/notification_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/base_margin"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowWeight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_notification"
+                            android:padding="@dimen/small_margin"
+                            android:text="@string/notifications" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/employee_card"
+                        style="@style/CardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/base_margin"
+                        app:cardCornerRadius="@dimen/corner_radius"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowWeight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_employee_24"
+                            android:padding="@dimen/small_margin"
+                            android:text="@string/employees" />
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.gridlayout.widget.GridLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation" />
+
+    </LinearLayout>
+</layout>

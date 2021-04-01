@@ -1,0 +1,219 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <string name="total_revenues_by_vendor">Total Revenues By Vendor</string>
+    <string name="total_revenue_by_item">Total Revenue By Item</string>
+    <string name="item_chart">Item_chart</string>
+    <string name="vendor_chart">Vendor_chart</string>
+    <string name="add_new_vendor">Add New Vendor</string>
+    <string name="remove_vendor">Remove Vendor</string>
+    <string name="app_name" translatable="false">BK_FoodCourt</string>
+    <string name="nav_home" translatable="false">Home</string>
+    <string name="nav_orderlist">Orders</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_profile">Profile</string>
+    <string name="enter_vendor_name">Enter Vendor Name</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="name">Name</string>
+    <string name="vendor_information_form">Vendor Information Form</string>
+    <string name="enter_vendor_s_owner_name">Enter Vendor\'s Owner Name</string>
+
+    <string name="vendor1">Vendor 1</string>
+    <string name="vendor2">Vendor2</string>
+    <string name="vendor3">Vendor 3</string>
+
+    <string name="choose_vendor_image">CHOOSE VENDOR IMAGE</string>
+    <string name="upload_image">UPLOAD IMAGE</string>
+    <string name="hot_line" translatable="false">Hotline</string>
+    <string name="enter_the_vendor_s_suppport_line_here" translatable="false">Enter the vendor\'s suppport line here</string>
+    <string name="open_time">Open Time</string>
+    <string name="enter_open_time">Enter Open Time</string>
+    <string name="close_time">Close Time</string>
+    <string name="enter_vendor_s_close_time">Enter vendor\'s close time</string>
+    <string name="vendorimage">VendorImage</string>
+    <string name="plans">PLANS</string>
+    <string name="management">MANAGEMENT</string>
+    <string name="bestsellers">BestSellers</string>
+    <string name="add_remove_vendors">Add/Remove Vendors</string>
+    <string name="vendor_management">Vendor Management</string>
+    <string name="check_stats">Check Stats</string>
+    <string name="top_5_vendor">TOP 5 VENDOR</string>
+    <string name="manage_button" translatable="false">MANAGE VENDORS</string>
+    <string name="vendors_stats" translatable="false">VENDORS STATS</string>
+    <string name="add_remove_a_vendor" translatable="false">ADD/REMOVE A VENDOR</string>
+    <string name="store_number_1" translatable="false">STORE NUMBER 1</string>
+    <string name="total_revenues" translatable="false">Total Revenues:</string>
+    <string name="total_revenues_1000" translatable="false">Total Revenues:1000$</string>
+    <string name="store_number_2" translatable="false">STORE NUMBER 2</string>
+    <string name="total_revenues_2000" translatable="false">Total Revenues: 2000$</string>
+    <string name="display_pie_chart" translatable="false">Display Pie Chart</string>
+    <string name="pie_chart_displaying_vendors_sale_in" translatable="false">Pie Chart Displaying Vendors\' Sale (in %)</string>
+    <string name="total_revenues_2500" translatable="false">Total revenues: 2500$</string>
+    <string name="item_5" translatable="false">ITEM 5</string>
+    <string name="total_revenues_3000" translatable="false">Total revenues: 3000$</string>
+    <string name="item_4" translatable="false">ITEM 4</string>
+    <string name="total_revenues_500" translatable="false">Total Revenues: 500$</string>
+    <string name="item_3" translatable="false">ITEM 3</string>
+    <string name="item2" translatable="false">ITEM2</string>
+    <string name="total_revenues_1500" translatable="false">Total Revenues: 1500$</string>
+    <string name="item1" translatable="false">ITEM1</string>
+    <string name="check_vendors_info" translatable="false">CHECK VENDORS INFO</string>
+    <string name="please_click_on_a_vendor_image_to_check_its_information" translatable="false">Please click on a vendor image to check its information</string>
+
+    <string name="tab_text_1">Ongoing</string>
+    <string name="tab_text_2">History</string>
+
+    <string-array name="user_choice">
+        <item>Customer</item>
+        <item>Cook</item>
+    </string-array>
+
+    <string name="title_activity_order_details">orderDetails</string>
+    <string name="no_rating">No ratings</string>
+    <string name="orders">Order</string>
+    <string name="take_away">Take away</string>
+    <string name="pickup">Pick up</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="total">Total</string>
+    <string name="applicable_fee">Applicable fee</string>
+    <string name="customer">Customer</string>
+    <string name="phone_number">Phone number</string>
+    <string name="promo">Promo</string>
+    <string name="vendor">Vendor</string>
+    <string name="filter">Filter</string>
+    <string name="choose_one_category">Choose one category</string>
+    <string name="hide_all">Hide all</string>
+    <string name="show_all">Show all</string>
+    <string name="delete">Delete</string>
+    <string name="menu">Menu</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="options">Options (Optional)</string>
+    <string name="no_onions_please">e.g No onions, please</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="dish_detail">Dish Detail</string>
+    <string name="update_cart">Update cart</string>
+    <string name="checkout">Checkout</string>
+    <string name="order_type">Order type</string>
+    <string name="payment_method">Payment method</string>
+    <string name="proceed_new_cart">Proceed to start new cart?</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_cart">Your cart is empty!</string>
+    <string name="promotion_code">Promotion code</string>
+    <string name="cart">Cart</string>
+    <string name="personal_information">Personal information</string>
+    <string name="change_password">Change password</string>
+    <string name="term_amp_privacy"><![CDATA[Term & Privacy]]></string>
+    <string name="about_us">About Us</string>
+    <string name="new_password">New password</string>
+    <string name="current_password">Current password</string>
+    <string name="save">Save</string>
+    <string name="weak_password">Weak password!</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="term_privacy_text" translatable="false">BK FoodCourt thừa nhận và tôn trọng thông tin bí mật của những cá nhân đăng nhập và sử dụng BK FoodCourt.\n\n
+        Chính sách này bao gồm thông tin cá nhân mà BK Merchant và bên nhượng quyền và đại diện các bên nhượng quyền của BK FoodCourt muốn sử dụng,
+        quản lý và bảo vệ thông tin cá nhân của khách khi đăng nhập hoặc đặt hàng qua trang web BK FoodCourt. \n\n
+        BK FoodCourt có thể thu thập thông tin cá nhân từ khách hàng bao gồm tên, địa chỉ, số điện thoại và số điện thoại di động, địa chỉ email,
+        chi tiết thẻ tín dụng và các thông tin khác nếu khách đồng ý cung cấp thông tin đó. Khi khách hàng sử dụng hệ thống đặt hàng trực tuyến,
+        họ phải trả lời các thông tin bổ sung. Thông tin này cho phép chúng tôi giao hàng nhanh hơn và dễ dàng hơn đến các địa điểm của khách hàng.
+        Hệ thống đặt hàng trực tuyến cũng lưu trữ thông tin về đơn đặt hàng của khách hàng để ghi nhớ và đặt hàng lại cho những lần giao dịch tiếp theo. \n\n
+        Nếu BK FoodCourt thu thập thông tin cá nhân của khách hàng từ người khác, BK FoodCourt sẽ thực hiện các bước hợp lý để thông báo cho khách hàng. \n\n
+        Khách hàng chịu trách nhiệm về sự an toàn của mình và duy trì việc sử dụng dịch vụ với tên đăng nhập, mật khẩu và hộp thư điện tử của mình. Ngoài ra,
+        khách hàng cũng phải có trách nhiệm thông báo kịp thời cho Website support.hcmut.edu.vn về bất kỳ việc sử dụng, lạm dụng hoặc vi phạm bí mật nào trái phép,
+        giữ lại tên đăng nhập và mật khẩu của bên thứ ba để có biện pháp khắc phục phù hợp.
+    </string>
+    <string name="term_of_use">Term of use</string>
+    <string name="location" translatable="false">Đại học Bách Khoa Tp. Hồ Chí Minh, Dĩ An, Bình Dương</string>
+    <string name="telephone" translatable="false">(84-8) 5416 1072 ~ 79</string>
+    <string name="fax" translatable="false">(84-8) 5416 1080 ~ 81</string>
+    <string name="marketing" translatable="false">marketing@hcmut.vn</string>
+    <string name="version">Version: 1.0.0</string>
+    <string name="term_and_privacy">Term and Privacy</string>
+    <string name="setting">Settings</string>
+    <string name="log_out">Log out</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="password">Password</string>
+    <string name="uploading">Uploading …</string>
+    <string name="address">Address</string>
+    <string name="email_change_warning">If you change your email, you will need to reauthenticate and verify new email</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="empty_field">Please enter this field</string>
+    <string name="require_password">Enter your password to continue</string>
+    <string name="verify_email">Please verify your email</string>
+    <string name="email_registered">This email is already in use by another account</string>
+    <string name="update_success">Update successful</string>
+    <string name="error_occur">Some error occurred</string>
+    <string name="reset_password">Please check your email to set new password</string>
+    <string name="password_condition">Password must be at least 6 characters</string>
+    <string name="password_not_match">Password not match</string>
+    <string name="password_setting">Password</string>
+    <string name="account_setting">Profile</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="create_account">Create new account</string>
+    <string name="login">Login</string>
+    <string name="bk_foodcourt" translatable="false">BK FoodCourt</string>
+    <string name="already_account">Already have account? Sign in here</string>
+    <string name="register">Register</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="no_permission">Permission denied</string>
+    <string name="login_success">Login successful</string>
+    <string name="register_fail">Register fail, please try again</string>
+    <string name="register_success">Register successful</string>
+    <string name="or">OR</string>
+    <string name="apply_promo_success">Promotion applied successfully, enjoyed!</string>
+    <string name="promo_min_error">Your order subtotal is too low!</string>
+    <string name="promo_max_error">Your order subtotal is too high!</string>
+    <string name="promo_active_time_error">Promotion isn\'t activated now</string>
+    <string name="promo_expire_time_error">Promotion is expired now!</string>
+    <string name="order_discount_description">Enter %s to get discount %s for order from %s to %s, applied from %s to %s</string>
+    <string name="new_order">New order</string>
+    <string name="new_order_approve">New order approved to %s. Check now!</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="my_order">My order</string>
+    <string name="no_vendor_error">You haven\'t worked for any vendor yet!</string>
+    <string name="e_g_out_of_order">E.g Out of order</string>
+    <string name="cancel_reason">Cancel reason:</string>
+    <string name="cancel_requirement">You must enter a reason to cancel this order</string>
+    <string name="order_cancelled">Order cancelled</string>
+    <string name="cancel_message">Your order #%s is cancel due to: %s</string>
+    <string name="finish_message">Your order #%s is finish. Get your food now!</string>
+    <string name="processed_order">This order has been processed by another cook</string>
+    <string name="get_order_success">Get order successful</string>
+    <string name="order_finished">Order finished</string>
+    <string name="finish">Finish</string>
+
+
+    <string-array name="channel_choice">
+        <item>Modify Request</item>
+        <item>Complete Notification</item>
+    </string-array>
+    <!-- Preference Titles -->
+    <string name="messages_header" translatable="false">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title" translatable="false">Your signature</string>
+    <string name="reply_title" translatable="false">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
+    <string name="confirm_cancel">Are your sure to cancel this order?</string>
+    <string name="warning">Warning</string>
+    <string name="confirm_status">CONFIRM</string>
+    <string name="processing_status">PROCESSING</string>
+    <string name="done_process_status">DONE PROCESS</string>
+    <string name="finish_status">FINISH</string>
+    <string name="cancel_status">CANCELLED</string>
+    <string name="pending_status">PENDING</string>
+    <string name="done">Done</string>
+    <string name="get_order">Get order</string>
+    <string name="checkout_success">Checkout successfully</string>
+
+</resources>

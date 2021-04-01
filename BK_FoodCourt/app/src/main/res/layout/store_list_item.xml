@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="store"
+            type="com.example.bk_foodcourt.home.Store" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bk_foodcourt.home.StoreViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/click_selector"
+        android:onClick="@{() -> viewModel.openStore(store)}"
+        android:paddingStart="@dimen/base_margin"
+        android:paddingTop="@dimen/fab_margin"
+        android:paddingEnd="@dimen/base_margin"
+        android:paddingBottom="@dimen/fab_margin"
+        app:vendor_close_time="@{store.closeTime}"
+        app:vendor_open_time="@{store.openTime}">
+
+        <ImageView
+            android:id="@+id/store_image"
+            android:layout_width="@dimen/image_small_size"
+            android:layout_height="@dimen/image_small_size"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{store.imageUrl}" />
+
+        <TextView
+            android:id="@+id/store_name"
+            style="@style/headerStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_toEndOf="@id/store_image"
+            android:text="@{store.name}"
+            tools:text="Domino's Pizza" />
+
+        <TextView
+            android:id="@+id/store_rating"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/store_name"
+            android:layout_alignStart="@id/store_name"
+            android:layout_marginTop="@dimen/small_margin"
+            android:drawableStart="@drawable/ic_star"
+            android:drawablePadding="@dimen/small_margin"
+            android:gravity="bottom"
+            app:star_rating="@{store.starRating}"
+            app:total_rating="@{store.totalRatings}"
+            tools:text="4.7" />
+
+        <TextView
+            android:id="@+id/store_opening_hours"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@id/store_rating"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/small_margin"
+            android:drawableStart="@drawable/ic_access_time_24"
+            android:drawablePadding="@dimen/small_margin"
+            app:close_time="@{store.closeTime}"
+            app:open_time="@{store.openTime}"
+            tools:text="7:00 - 21:00" />
+
+        <TextView
+            android:id="@+id/store_description"
+            style="@style/textStyle"
+            android:layout_width="match_parent"
+            android:layout_below="@id/store_rating"
+            android:layout_alignStart="@id/store_name"
+            android:layout_marginTop="@dimen/small_margin"
+            android:maxLines="2"
+            android:text="@{store.description}"
+            android:textColor="@android:color/tab_indicator_text"
+            tools:text="Tiết kiệm đến 25%. Phù hợp  với nhóm từ 2-4 người. Pizza nướng thơm lừng ..." />
+
+    </RelativeLayout>
+</layout>

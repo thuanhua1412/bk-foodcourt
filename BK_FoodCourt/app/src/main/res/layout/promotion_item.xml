@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="promotion"
+            type="com.example.bk_foodcourt.menu.Promotion" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bk_foodcourt.menu.MenuViewModel" />
+    </data>
+
+    <TextView
+        style="@style/textStyle"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_promotion"
+        android:drawablePadding="@dimen/small_margin"
+        app:promotion_description="@{promotion}"
+        tools:text="Enter GIAM20 to get discount 20% for order from 200000d to 500000d" />
+</layout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bkmerchant.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_homeStoreDetailFragment"
+            app:destination="@id/homeStoreDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_promotionFragment"
+            app:destination="@id/promotionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.bkmerchant.menu.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/menu_fragment">
+        <action
+            android:id="@+id/action_menuFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_dishFragment"
+            app:destination="@id/dishFragment" />
+        <argument
+            android:name="storeId"
+            android:defaultValue='""'
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.bkmerchant.menu.category.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/category_fragment">
+        <argument
+            android:name="category"
+            app:argType="com.example.bkmerchant.menu.Category" />
+        <action
+            android:id="@+id/action_categoryFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishFragment"
+        android:name="com.example.bkmerchant.menu.dish.DishFragment"
+        android:label="DishFragment"
+        tools:layout="@layout/dish_fragment">
+        <argument
+            android:name="dish"
+            app:argType="com.example.bkmerchant.menu.Dish" />
+        <action
+            android:id="@+id/action_dishFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeStoreDetailFragment"
+        android:name="com.example.bkmerchant.home.HomeStoreDetailFragment"
+        android:label="HomeStoreDetailFragment"
+        tools:layout="@layout/store_detail_fragment">
+        <argument
+            android:name="store"
+            app:argType="com.example.bkmerchant.storeActivity.Store" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.bkmerchant.order.OrderFragment"
+        android:label="OrderFragment"
+        tools:layout="@layout/order_fragment">
+        <argument
+            android:name="storeID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_orderFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.bkmerchant.order.orderDetail.OrderDetailFragment"
+        android:label="OrderDetailFragment"
+        tools:layout="@layout/order_detail">
+        <action
+            android:id="@+id/action_orderDetailFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <argument
+            android:name="order"
+            app:argType="com.example.bkmerchant.order.Order" />
+    </fragment>
+    <fragment
+        android:id="@+id/promotionFragment"
+        android:name="com.example.bkmerchant.promotion.PromotionFragment"
+        android:label="PromotionFragment"
+        tools:layout="@layout/promotion_fragment" >
+        <argument
+            android:name="storeId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_promotionFragment_to_promotionDetailFragment"
+            app:destination="@id/promotionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/promotionDetailFragment"
+        android:name="com.example.bkmerchant.promotion.promotionDetail.PromotionDetailFragment"
+        android:label="PromotionDetailFragment"
+        tools:layout="@layout/promotion_detail_fragment" >
+        <argument
+            android:name="promotion"
+            app:argType="com.example.bkmerchant.promotion.Promotion" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.bkmerchant.report.ReportFragment"
+        android:label="ReportFragment"
+        tools:layout="@layout/report_fragment">
+        <argument
+            android:name="storeId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeFragment"
+        android:name="com.example.bkmerchant.employee.EmployeeFragment"
+        android:label="EmployeeFragment"
+        tools:layout="@layout/employee_fragment">
+        <action
+            android:id="@+id/action_employeeFragment_to_addEmployeeFragment"
+            app:destination="@id/addEmployeeFragment" />
+        <argument
+            android:name="storeId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.example.bkmerchant.employee.AddEmployeeFragment"
+        android:label="AddEmployeeFragment"
+        tools:layout="@layout/employee_add_fragment">
+        <argument
+            android:name="storeId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.bkmerchant.notification.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/notification_fragment"/>
+</navigation>

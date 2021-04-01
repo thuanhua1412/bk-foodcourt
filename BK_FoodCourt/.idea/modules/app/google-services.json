@@ -1,0 +1,204 @@
+{
+  "project_info": {
+    "project_number": "165534808147",
+    "firebase_url": "https://bk-food-court.firebaseio.com",
+    "project_id": "bk-food-court",
+    "storage_bucket": "bk-food-court.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165534808147:android:722857587519d3fe94eea6",
+        "android_client_info": {
+          "package_name": "com.example.bk_foodcourt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165534808147-q7ati1u4ch7jqv29esqsdsgpj9n30si0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bk_foodcourt",
+            "certificate_hash": "ee5bfcdf79e5b6950cb7b1b756eae0389fe5607e"
+          }
+        },
+        {
+          "client_id": "165534808147-6ef8lmg82t6unrbnl0b1h555u7enhcei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bk_foodcourt",
+            "certificate_hash": "0c2b4ce3238874a0a4e543ff9b4561d5a1a0c8c0"
+          }
+        },
+        {
+          "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoXOPXK9HrI6li0U6joZSc6Gf_uKI1VUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165534808147:android:6120a2e0234ab70094eea6",
+        "android_client_info": {
+          "package_name": "com.example.bkfc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165534808147-ni0jf6vqjf6a7ukp8ndcrc63m0jo3f0l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bkfc",
+            "certificate_hash": "0c2b4ce3238874a0a4e543ff9b4561d5a1a0c8c0"
+          }
+        },
+        {
+          "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoXOPXK9HrI6li0U6joZSc6Gf_uKI1VUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165534808147:android:244f26bc144c0ac094eea6",
+        "android_client_info": {
+          "package_name": "com.example.bkfoodcourt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165534808147-kehqstiqvh4ntummc4u652hepji8op50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bkfoodcourt",
+            "certificate_hash": "0c2b4ce3238874a0a4e543ff9b4561d5a1a0c8c0"
+          }
+        },
+        {
+          "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoXOPXK9HrI6li0U6joZSc6Gf_uKI1VUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165534808147:android:9121d17d0d2af3d594eea6",
+        "android_client_info": {
+          "package_name": "com.example.bkmerchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165534808147-in55qtm8ctqujiokkapr8ub5bid4hr3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bkmerchant",
+            "certificate_hash": "a86ae9bad4371df4b405bfc9b9b54e676fcb4ac3"
+          }
+        },
+        {
+          "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoXOPXK9HrI6li0U6joZSc6Gf_uKI1VUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165534808147:android:ef236d74982a19f894eea6",
+        "android_client_info": {
+          "package_name": "com.example.foodcourtreport_man"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165534808147-04pi85vta7na2707q3rjhtrstj1u4og4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodcourtreport_man",
+            "certificate_hash": "ee5bfcdf79e5b6950cb7b1b756eae0389fe5607e"
+          }
+        },
+        {
+          "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoXOPXK9HrI6li0U6joZSc6Gf_uKI1VUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

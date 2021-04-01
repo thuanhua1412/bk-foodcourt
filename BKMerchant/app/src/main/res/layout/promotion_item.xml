@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="promotion"
+            type="com.example.bkmerchant.promotion.Promotion" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bkmerchant.promotion.PromotionViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:onClick="@{() -> viewModel.showPromotionDetail(promotion)}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/base_margin">
+
+            <ImageView
+                android:id="@+id/promotion_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:src="@drawable/ic_sale"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/promotion_title"
+                style="@style/subHeaderStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:maxLines="1"
+                android:text="@{promotion.label}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/promotion_status"
+                app:layout_constraintStart_toEndOf="@id/promotion_icon"
+                app:layout_constraintTop_toTopOf="@id/promotion_icon"
+                tools:text="Order percent discount" />
+
+            <TextView
+                android:id="@+id/promotion_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:fontFamily="@font/roboto"
+                android:maxLines="3"
+                android:minLines="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/promotion_title"
+                app:layout_constraintTop_toBottomOf="@id/promotion_title"
+                app:promotion_description="@{promotion}"
+                tools:text=" Promotion description Promotion description Promotion description" />
+
+            <TextView
+                android:id="@+id/promotion_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:fontFamily="@font/roboto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/promotion_title"
+                app:layout_constraintTop_toBottomOf="@id/promotion_description"
+                app:promotion_activate_day="@{promotion.activateDay}"
+                app:promotion_expire_day="@{promotion.expireDay}"
+                tools:text="06/07/2020 - 20/07/2020" />
+
+            <TextView
+                android:id="@+id/promotion_day_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:fontFamily="@font/roboto"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/promotion_time"
+                app:layout_constraintTop_toTopOf="@id/promotion_time"
+                app:promotion_activate_time="@{promotion.activateDayTime}"
+                app:promotion_expire_time="@{promotion.expireDayTime}"
+                tools:text="8:00 - 9:00" />
+
+
+            <Switch
+                android:id="@+id/promotion_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{promotion.status}"
+                android:onClick="@{() -> viewModel.changePromotionStatus(promotion)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/promotion_icon" />
+
+            <TextView
+                android:id="@+id/promotion_use"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:visibility="@{promotion.scope==0 ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="@id/promotion_icon"
+                app:layout_constraintTop_toBottomOf="@id/promotion_time"
+                app:promotion_num_allowed="@{promotion.numAllowed}"
+                app:promotion_num_used="@{promotion.numUsed}"
+                tools:text="3/1200000" />
+
+            <TextView
+                android:id="@+id/promotion_use_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/use_times"
+                android:visibility="@{promotion.scope==0 ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="@id/promotion_icon"
+                app:layout_constraintTop_toBottomOf="@id/promotion_use" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/storeFragment">
+
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.example.bk_foodcourt.home.StoreFragment"
+        android:label="StoreFragment"
+        tools:layout="@layout/store_fragment">
+        <action
+            android:id="@+id/action_storeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.bk_foodcourt.menu.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/menu_fragment">
+        <action
+            android:id="@+id/action_menuFragment_to_dishFragment"
+            app:destination="@id/dishFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <argument
+            android:name="store"
+            app:argType="com.example.bk_foodcourt.home.Store" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishFragment"
+        android:name="com.example.bk_foodcourt.menu.dish.DishFragment"
+        android:label="DishFragment"
+        tools:layout="@layout/dish_detail_fragment">
+        <argument
+            android:name="dish"
+            app:argType="com.example.bk_foodcourt.menu.Dish" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.bk_foodcourt.menu.cart.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/cart_fragment">
+        <action
+            android:id="@+id/action_cartFragment_to_dishFragment"
+            app:destination="@id/dishFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_storeFragment"
+            app:destination="@id/storeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/storeFragment" />
+        <argument
+            android:name="store"
+            app:argType="com.example.bk_foodcourt.home.Store" />
+    </fragment>
+</navigation>

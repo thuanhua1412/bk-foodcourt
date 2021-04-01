@@ -1,0 +1,205 @@
+<resources>
+    <!-- Title   -->
+    <string name="app_name">BKMerchant</string>
+    <string name="account_setting">Account Settings</string>
+    <string name="password_setting">Password</string>
+    <string name="term_and_privacy">Term and Privacy</string>
+    <string name="store_detail">Store Details</string>
+    <string name="menu">Menu</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="payment">Payment</string>
+    <string name="store">Store</string>
+    <string name="account">Account</string>
+    <string name="orders">Orders</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="promotions">Promotions</string>
+    <string name="promotion_detail">Promotion Detail</string>
+    <string name="notifications">Notifications</string>
+    <string name="report">Report</string>
+    <string name="employees">Employees</string>
+    <string name="employee_add">Add Employee</string>
+    <string name="personal_information">Personal information</string>
+    <string name="change_password">Change password</string>
+    <string name="term_amp_privacy"><![CDATA[Term & Privacy]]></string>
+    <string name="about_us">About Us</string>
+
+    <string name="empty_field">Please enter this field</string>
+
+    <!-- Log in + Register   -->
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create new account</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="already_account">Already have account? Sign in here</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="name">Name</string>
+    <string name="log_out">Log out</string>
+    <string name="or">OR</string>
+    <string name="filter">Filter</string>
+    <string name="password_condition">Password must be at least 6 characters</string>
+    <string name="no_permission">Sorry, you don\'t have permission to use this app</string>
+    <string name="login_success">Login successful</string>
+    <string name="wrong_email_password">Wrong email or password</string>
+    <string name="register_success">Register successful</string>
+    <string name="reset_password">Please check your email to set new password</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="email_registered">This email is already in use by another account</string>
+    <string name="register_fail">Register failed, please try again</string>
+
+    <!--  Welcome text  -->
+    <string name="welcome_text">Welcome, \n
+        %s</string>
+
+    <!--  Menu  -->
+    <string name="category">Category</string>
+    <string name="dish">Dish</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="image">Image</string>
+    <string name="hide_all">Hide all</string>
+    <string name="show_all">Show all</string>
+    <string name="choose_one_category">Choose one category</string>
+    <string name="duplicate_category">Duplicate category</string>
+    <string name="duplicate_item">Duplicate item</string>
+    <string name="strike_text" translatable="false"><strike>%s</strike></string>
+    <string name="discount_price">Discount Price</string>
+    <string name="no_category">Your menu is empty, please create a new category first</string>
+
+    <!--  Sale summary  -->
+    <string name="total_sales">Total sales Today</string>
+    <string name="currency" translatable="false">VNĐ</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="change_information">Change information</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="price_money" translatable="false">đ</string>
+
+    <!--  Store detail  -->
+    <string name="open_time">Opening Time</string>
+    <string name="close_time">Closing Time</string>
+    <string name="change">Change</string>
+    <string name="hotline" translatable="false">Hotline</string>
+    <string name="website" translatable="false">Website</string>
+    <string name="support_email">Support email</string>
+    <string name="no_rating">No ratings</string>
+    <string name="time_lesser">Opening time must be less than closing time</string>
+
+    <!--  Raw About Us  -->
+    <string name="term_privacy_text" translatable="false">BK Merchant thừa nhận và tôn trọng thông tin bí mật của những cá nhân đăng nhập và sử dụng BK Merchant.\n\n
+        Chính sách này bao gồm thông tin cá nhân mà BK Merchant và bên nhượng quyền và đại diện các bên nhượng quyền của BK Merchant muốn sử dụng,
+        quản lý và bảo vệ thông tin cá nhân của khách khi đăng nhập hoặc đặt hàng qua trang web BK Merchant. \n\n
+        BK Merchant có thể thu thập thông tin cá nhân từ khách hàng bao gồm tên, địa chỉ, số điện thoại và số điện thoại di động, địa chỉ email,
+        chi tiết thẻ tín dụng và các thông tin khác nếu khách đồng ý cung cấp thông tin đó. Khi khách hàng sử dụng hệ thống đặt hàng trực tuyến,
+        họ phải trả lời các thông tin bổ sung. Thông tin này cho phép chúng tôi giao hàng nhanh hơn và dễ dàng hơn đến các địa điểm của khách hàng.
+        Hệ thống đặt hàng trực tuyến cũng lưu trữ thông tin về đơn đặt hàng của khách hàng để ghi nhớ và đặt hàng lại cho những lần giao dịch tiếp theo. \n\n
+        Nếu BK Merchant thu thập thông tin cá nhân của khách hàng từ người khác, BK Merchant sẽ thực hiện các bước hợp lý để thông báo cho khách hàng. \n\n
+        Khách hàng chịu trách nhiệm về sự an toàn của mình và duy trì việc sử dụng dịch vụ với tên đăng nhập, mật khẩu và hộp thư điện tử của mình. Ngoài ra,
+        khách hàng cũng phải có trách nhiệm thông báo kịp thời cho Website support.hcmut.edu.vn về bất kỳ việc sử dụng, lạm dụng hoặc vi phạm bí mật nào trái phép,
+        giữ lại tên đăng nhập và mật khẩu của bên thứ ba để có biện pháp khắc phục phù hợp.
+    </string>
+    <string name="term_of_use">Term of use</string>
+    <string name="location" translatable="false">Đại học Bách Khoa Tp. Hồ Chí Minh, Dĩ An, Bình Dương</string>
+    <string name="telephone" translatable="false">(84-8) 5416 1072 ~ 79</string>
+    <string name="fax" translatable="false">(84-8) 5416 1080 ~ 81</string>
+    <string name="marketing" translatable="false">marketing@hcmut.vn</string>
+    <string name="version">Version: 1.0.0</string>
+
+    <!--  Change password  -->
+    <string name="new_password">New password</string>
+    <string name="current_password">Current password</string>
+    <string name="save">Save</string>
+    <string name="weak_password">Weak password!</string>
+    <string name="wrong_password">Wrong password</string>
+
+    <!--  Order  -->
+    <string name="title_activity_order">Order</string>
+    <string name="tab_text_1">Ongoing</string>
+    <string name="tab_text_2">History</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="total">Total</string>
+    <string name="applicable_fee">Applicable fee</string>
+    <string name="customer">Customer</string>
+    <string name="phone_number">Phone number</string>
+    <string name="pickup">Pickup</string>
+    <string name="take_away">Take away</string>
+    <string name="order_discount_description">Enter %s to get discount %s for order from %s to %s</string>
+    <string name="menu_discount_description">Discount %s for all items in menu</string>
+    <string name="category_discount_description">Discount %s for all items in %s</string>
+    <string name="item_discount_description">Discount %s for %s</string>
+    <string name="order_cancelled">Order cancelled</string>
+    <string name="cancel_requirement">You must enter reason to cancel this order</string>
+    <string name="cancel_message">Your order #%s is cancel due to: %s</string>
+    <string name="cancel_reason">Cancel reason: </string>
+    <string name="e_g_out_of_order">E.g Out of order</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="pending_status">PENDING</string>
+    <string name="confirm_status">CONFIRMED</string>
+    <string name="processing_status">PROCESSING</string>
+    <string name="done_process_status">DONE PROCESS</string>
+    <string name="finish_status">FINISH</string>
+    <string name="cancel_status">CANCELLED</string>
+
+    <!--  Promotion  -->
+    <string name="use_times">Use times</string>
+    <string name="label" translatable="false">Label</string>
+    <string name="discount_type">Discount type</string>
+    <string name="discount_scope">Discount scope</string>
+    <string name="value">Value</string>
+    <string name="activate_day">Activate day</string>
+    <string name="expired_day">Expired day</string>
+    <string name="activate_time">Activate time</string>
+    <string name="expired_time">Expired time</string>
+    <string name="num_allowed">Num allowed</string>
+    <string name="code" translatable="false">Code</string>
+    <string name="to_order">To order</string>
+    <string name="from_order">From order</string>
+    <string name="discount_percent_condition">Discount percent must be less than 100</string>
+    <string name="day_lesser">Activate day must be less than expired day</string>
+    <string name="select_item">Select items</string>
+    <string name="promotion_code_used">Promotion code had been used before!</string>
+    <string name="order_lesser">Order min must be less than order max</string>
+    <string name="friendly_display">For friendly display purpose</string>
+    <string name="list_item">List item</string>
+
+    <!--  Report  -->
+    <string name="today_report">Sale report</string>
+    <string name="num_process_order">Process order: %d</string>
+    <string name="num_finish_order">Finish order: %d</string>
+    <string name="num_cancel_order">Cancel order: %d</string>
+    <string name="today_total_sales">Total sales: %s</string>
+
+    <string name="update_success">Update successful</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_success">Add successful</string>
+    <string name="error_occur">Some error occurred, please try again</string>
+    <string name="verify_email">Please verify your email</string>
+    <string name="address">Address</string>
+    <string name="password_not_match">Password not match</string>
+    <string name="require_password">Enter your password to continue</string>
+    <string name="email_change_warning">If you change your email, you will need to reauthenticate and verify new email</string>
+    <string name="remove">Remove</string>
+    <string name="promo">Promo</string>
+    <string name="setting">Settings</string>
+    <string name="uploading">Uploading …</string>
+    <string name="no_notification">No notifications to show</string>
+    <string name="this_feature_will_be_updated_soon">This feature will be updated soon</string>
+    <string name="priority">Priority</string>
+
+    <!-- Sync Preferences -->
+    <string name="english">English</string>
+    <string name="language" translatable="false">language</string>
+    <string name="language_label">Select language</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="en" translatable="false">en</string>
+    <string name="add_permission_success">Add permission successfully</string>
+    <string name="permision_invalid">You can\'t change this email permission</string>
+    <string name="request_error" translatable="false">Request error</string>
+    <string name="upload_in_progress">Uploading in progress</string>
+    <string name="email_not_exist">This email hasn\'t registered to the system</string>
+
+</resources>

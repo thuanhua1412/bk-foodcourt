@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@color/basilBackground">
+
+        <ImageView
+            android:id="@+id/store_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/box"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_no_image"
+            tools:srcCompat="@drawable/ic_no_image"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/store_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/store_image"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Best Store Forever"
+            android:textColor="@color/headline"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/owner_name_field"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textStyle="normal"
+            android:textColor="@color/basilHorizontalLine"
+            android:text="@string/owner_name"
+            android:gravity="center_vertical"
+            android:background="@drawable/box"
+            android:backgroundTint="@color/basilFieldBackground"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_below="@+id/store_name_text"/>
+        <TextView
+            android:id="@+id/OwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/owner_name1"
+            android:layout_below="@id/store_name_text"
+            android:layout_toEndOf="@id/owner_name_field"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/basilTextColor"
+            android:textStyle="bold"
+            />
+
+        <View
+            android:id="@+id/fakeView"
+            android:layout_width="2dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/hotLine"
+            android:layout_below="@id/OwnerName"
+            android:layout_centerHorizontal="true"
+            android:background="@color/basilFieldBackground"
+            />
+
+        <TextView
+            android:id="@+id/from_field"
+            android:layout_width="72dp"
+            android:layout_height="49dp"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:layout_below="@id/owner_name_field"
+            android:layout_marginTop="10dp"
+            android:text="@string/from"
+            android:textColor="@color/basilHorizontalLine" />
+        <TextView
+            android:id="@+id/open_time_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/OwnerName"
+            android:layout_toEndOf="@id/from_field"
+            android:layout_alignEnd="@id/fakeView"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/open_time_format"
+            android:textStyle="bold"
+            android:textColor="@color/basilTextColor"
+            />
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/OwnerName"
+            android:layout_toEndOf="@id/fakeView"
+            android:text="@string/to"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/basilHorizontalLine"
+            />
+        <TextView
+            android:id="@+id/close_time_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/OwnerName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="@string/close_time_format"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/to"
+            android:textColor="@color/basilTextColor"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/close_time_detail"
+            android:layout_marginTop="2dp"
+            android:paddingTop="10dp"
+            android:layout_above="@id/hotLine"
+            android:background="@color/basilTextColor" />
+
+        <TextView
+            android:id="@+id/hot_line_field"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/from_field"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/hotline_field"
+            android:textColor="@color/basilHorizontalLine" />
+        <TextView
+            android:id="@+id/hotLine"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/open_time_detail"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:textColor="@color/basilTextColor"
+            android:layout_toEndOf="@id/hot_line_field"
+            android:text="@string/_0886673468" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TotalRevenueItem_StatReport">
+
+    <Button
+        android:id="@+id/display_chart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/display_pie_chart"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/vendorID_name"
+                android:text="@string/store_number_1" />
+
+            <ImageView
+                android:id="@+id/vendor1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/kfc_logo" />
+
+            <TextView
+                style="@style/totalRevenues"
+
+                android:text="Total Revenues: 1000$ " />
+
+            <TextView
+                style="@style/vendorID_name"
+                android:text="@string/store_number_2" />
+
+            <ImageView
+                android:id="@+id/vendor2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/tfc_logo" />
+
+            <TextView
+                style="@style/totalRevenues"
+                android:text="@string/total_revenues_2000" />
+
+            <TextView
+                style="@style/vendorID_name"
+                android:text="VENDOR NUMBER 3" />
+
+            <ImageView
+                android:id="@+id/iamge3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/circle_k_logo" />
+
+            <TextView
+                style="@style/totalRevenues"
+                android:text="@string/total_revenues_2000" />
+
+            <TextView
+                style="@style/vendorID_name"
+                android:text="VENDOR NUMBER 4" />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/rectangle_k" />
+
+            <TextView
+                style="@style/totalRevenues"
+                android:text="Total revenues: 3000$" />
+
+            <TextView
+                style="@style/vendorID_name"
+                android:text="VENDOR NUMBER 5" />
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/dominopizzalogo" />
+
+            <TextView
+                style="@style/totalRevenues"
+                android:text="Total revenues: 4000$" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

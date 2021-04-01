@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "165534808147",
+    "firebase_url": "https://bk-food-court.firebaseio.com",
+    "project_id": "bk-food-court",
+    "storage_bucket": "bk-food-court.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165534808147:android:9121d17d0d2af3d594eea6",
+        "android_client_info": {
+          "package_name": "com.example.bkmerchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165534808147-in55qtm8ctqujiokkapr8ub5bid4hr3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bkmerchant",
+            "certificate_hash": "a86ae9bad4371df4b405bfc9b9b54e676fcb4ac3"
+          }
+        },
+        {
+          "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoXOPXK9HrI6li0U6joZSc6Gf_uKI1VUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165534808147-k7nd6bf3vms9t0tu4f044qrg6kbguf5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

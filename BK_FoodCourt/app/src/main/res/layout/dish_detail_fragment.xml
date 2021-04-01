@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dish"
+            type="com.example.bk_foodcourt.menu.Dish" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bk_foodcourt.menu.dish.DishViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/dish_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_large_size"
+                android:layout_marginTop="@dimen/small_margin"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{dish.imageUrl}" />
+
+            <TextView
+                android:id="@+id/dish_name"
+                style="@style/headerStyle"
+                android:layout_width="match_parent"
+                android:layout_below="@id/dish_image"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginTop="@dimen/base_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:layout_toStartOf="@id/dish_price"
+                android:maxLines="2"
+                android:text="@{dish.name}"
+                tools:text="Pizza" />
+
+            <TextView
+                android:id="@+id/dish_discount_price"
+                style="@style/subHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignBottom="@id/dish_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:textStyle="bold"
+                app:priceText="@{dish.discountPrice}"
+                tools:text="99,000đ" />
+
+            <TextView
+                android:id="@+id/dish_price"
+                style="@style/subHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/dish_discount_price"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:textStyle="bold"
+                android:textColor="@android:color/tab_indicator_text"
+                android:visibility="@{dish.discountPrice!=dish.price ? View.VISIBLE : View.INVISIBLE}"
+                app:strike_price_text="@{dish.price}"
+                tools:text="99,000đ" />
+
+            <TextView
+                android:id="@+id/dish_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dish_price"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@{dish.description}"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:text="Description of a dish Description of a dish" />
+
+            <TextView
+                android:id="@+id/option_text"
+                style="@style/subHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/dish_description"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="@string/options" />
+
+            <EditText
+                android:id="@+id/dish_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/option_text"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:hint="@string/no_onions_please"
+                android:inputType="textMultiLine"
+                android:text="@={viewModel.options}" />
+
+            <TextView
+                android:id="@+id/dish_quantity"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/dish_option"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/base_margin"
+                android:paddingTop="@dimen/small_margin"
+                android:text="@{String.valueOf(viewModel.quantity)}"
+                tools:text="1" />
+
+            <Button
+                android:id="@+id/sub_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/dish_option"
+                android:layout_marginTop="@dimen/base_margin"
+                android:layout_toStartOf="@id/dish_quantity"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/dish_option"
+                android:layout_marginTop="@dimen/base_margin"
+                android:layout_toEndOf="@id/dish_quantity"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/cart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sub_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/base_margin"
+                android:background="@drawable/secondary_button_selector"
+                android:paddingStart="@dimen/base_margin"
+                android:paddingEnd="@dimen/base_margin"
+                android:text="@{dish.quantity==0 ? @string/add_to_cart: @string/update_cart}"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>

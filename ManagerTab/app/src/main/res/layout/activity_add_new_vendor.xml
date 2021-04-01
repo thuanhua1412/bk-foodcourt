@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="managerViewModel"
+            type="com.example.managertab.AddVendorViewModel" />
+    </data>
+
+    <ScrollView
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        tools:context=".AddNewVendorActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/basilBackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/addVendorFormTitle"
+                android:text="@string/vendor_s_information"
+                android:textSize="34sp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/headline" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/basilHorizontalLine" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#B9E4C9">
+
+                <ImageView
+                    android:id="@+id/openTimeClockIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+                <View
+                    android:id="@+id/verticalLine1"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/openTimeClockIcon"
+                    android:background="@color/basilHorizontalLine" />
+
+                <LinearLayout
+                    android:id="@+id/openTimeField"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_toEndOf="@id/verticalLine1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="336dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/lekton_bold"
+                        android:text="@string/service_start_time"
+                        android:textColor="@color/basilTextColor"
+                        android:paddingStart="5dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/basilHorizontalLine" />
+
+                    <EditText
+                        android:id="@+id/openTimeEditText"
+                        android:layout_width="343dp"
+                        android:layout_height="58dp"
+                        android:hint="@string/choose_vendor_open_time"
+                        android:textColor="@color/basilTextColor"
+                        android:textSize="26sp"
+                        android:inputType="number"
+                        android:focusableInTouchMode="false"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/basilHorizontalLine" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B9E4C9">
+
+                <ImageView
+                    android:id="@+id/closeTimeClockIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+                <View
+                    android:id="@+id/verticalLine2"
+                    android:layout_width="2dp"
+                    android:layout_height="80dp"
+                    android:layout_toEndOf="@id/closeTimeClockIcon"
+                    android:background="@color/basilHorizontalLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_toEndOf="@id/closeTimeClockIcon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="336dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/lekton_bold"
+                        android:text="Service Close Time:"
+                        android:textColor="@color/basilTextColor"
+                        android:paddingStart="5dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/basilHorizontalLine" />
+
+                    <EditText
+                        android:id="@+id/closeTimeEditText"
+                        android:layout_width="343dp"
+                        android:layout_height="58dp"
+                        android:hint="Choose Vendor Close Time"
+                        android:textColor="@color/basilTextColor"
+                        android:textSize="26sp"
+                        android:inputType="number"
+                        android:focusableInTouchMode="false"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/basilHorizontalLine" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/nameIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/vendor_manage" />
+
+                <EditText
+                    android:id="@+id/vendorNameEditText"
+                    android:layout_toEndOf="@id/nameIcon"
+                    android:hint="@string/enter_vendor_s_name_here"
+                    style="@style/EditTextFieldForm" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/hotLine"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@android:drawable/ic_menu_call" />
+
+                <EditText
+                    android:id="@+id/hotLineEditText"
+                    android:layout_toEndOf="@id/hotLine"
+                    android:hint="@string/vendor_s_support_hot_line"
+                    style="@style/EditTextFieldForm"
+                    android:inputType="phone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/vendorOwnerIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/avatar" />
+
+                <EditText
+                    android:id="@+id/vendorOwnerNameEditText"
+                    android:layout_toEndOf="@id/vendorOwnerIcon"
+                    android:hint="@string/vendor_s_owner_full_name"
+                    style="@style/EditTextFieldForm"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/supportMail"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@android:drawable/sym_action_email" />
+
+                <EditText
+                    android:id="@+id/supportMailEditText"
+                    android:layout_toEndOf="@id/supportMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="@string/vendor_s_owner_mail"
+                    style="@style/EditTextFieldForm"
+                    android:inputType="textEmailAddress" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/vendorWebsiteIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/googleg_standard_color_18" />
+
+                <EditText
+                    android:id="@+id/websiteEditText"
+                    android:layout_toEndOf="@id/vendorWebsiteIcon"
+                    android:hint="@string/the_vendor_s_official_website"
+                    style="@style/EditTextFieldForm"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/basilHorizontalLine"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:background="@color/basilFieldBackground"
+                android:textAlignment="center"
+                android:fontFamily="@font/lekton_bold"
+                android:text="Vendor Image" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/basilHorizontalLine" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="429dp"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/chooseImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_vendor_image"
+
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/vendor_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/progressUploadImage"
+                    android:layout_below="@id/chooseImageButton"
+                    android:layout_marginTop="16dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressUploadImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/uploadButton" />
+
+                <Button
+                    android:id="@+id/uploadButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/upload_to_database" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/basilHorizontalLine"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:background="@color/basilFieldBackground"
+                android:textAlignment="center"
+                android:fontFamily="@font/lekton_bold"
+                android:text="Description" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/basilHorizontalLine" />
+
+            <EditText
+                android:id="@+id/vendor_description_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/brief_description_about_the_vendor"
+                android:maxHeight="200dp"
+                android:fontFamily="@font/montserrat"
+                android:minHeight="100dp"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/done_button"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/done"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

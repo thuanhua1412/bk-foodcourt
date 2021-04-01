@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/store_nav_graph"
+    app:startDestination="@id/storeFragment">
+
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.example.bkmerchant.storeActivity.store.StoreFragment"
+        android:label="StoreFragment"
+        tools:layout="@layout/store_fragment">
+        <action
+            android:id="@+id/action_storeFragment_to_storeDetailFragment"
+            app:destination="@id/storeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeDetailFragment"
+        android:name="com.example.bkmerchant.storeActivity.storeDetail.StoreDetailFragment"
+        android:label="StoreDetailFragment"
+        tools:layout="@layout/store_detail_fragment">
+        <argument
+            android:name="store"
+            app:argType="com.example.bkmerchant.storeActivity.Store" />
+    </fragment>
+</navigation>

@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">ManagerTab</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="total_revenues_by_vendor">Total Revenues By Vendor</string>
+    <string name="total_revenue_by_item">Total Revenue By Item</string>
+    <string name="item_chart">Item_chart</string>
+    <string name="vendor_chart">Vendor_chart</string>
+    <string name="add_new_vendor">Add New Vendor</string>
+    <string name="remove_vendor">Remove Vendor</string>
+    <string name="remove_the_fucking_vendor">REMOVE THE FUCKING VENDOR</string>
+    <string name="add_the_fucking_vendor">ADD THE FUCKING VENDOR</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_orderlist">Order List</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_profile">Profile</string>
+    <string name="enter_vendor_name">Enter Vendor Name</string>
+    <string name="owner_name">Owner Name:</string>
+    <string name="name">Name:</string>
+    <string name="vendor_information_form">Vendor Information Form</string>
+    <string name="enter_vendor_s_owner_name">Enter Vendor\'s Owner Name</string>
+    <string name="confirm_store_delete">Delete this store?
+        \n this action cannot be reverted </string>
+    <string name="confirm_delete_positive">DELETE</string>
+    <string name="confirm_delete_negative">RETURN</string>
+    <string name="vendor1">Vendor 1</string>
+    <string name="vendor2">Vendor2</string>
+    <string name="vendor3">Vendor 3</string>
+    <string name="open_time_format">0:00</string>
+    <string name="close_time_format">0:00</string>
+    <string name="choose_vendor_image">CHOOSE IMAGE</string>
+    <string name="upload_image">UPLOAD IMAGE</string>
+    <string name="hot_line">Hot Line:</string>
+    <string name="enter_the_vendor_s_suppport_line_here">Enter the vendor\'s suppport line here</string>
+    <string name="open_time">Open Time:</string>
+    <string name="enter_open_time">Enter Open Time</string>
+    <string name="enter_vendor_s_close_time">Enter vendor\'s close time</string>
+    <string name="vendorimage">VendorImage</string>
+    <string name="plans">PLANS</string>
+    <string name="management">MANAGEMENT</string>
+    <string name="bestsellers">BestSellers</string>
+    <string name="add_remove_vendors">Add A Vendor</string>
+    <string name="vendor_management">Vendor Management</string>
+    <string name="check_stats">Check Stats</string>
+    <string name="top_5_vendor">TOP 5 VENDOR</string>
+    <string name="manage_button">MANAGE VENDORS</string>
+    <string name="vendors_stats">VENDORS STATS</string>
+    <string name="add_remove_a_vendor">ADD/REMOVE A VENDOR</string>
+    <string name="store_number_1">STORE NUMBER 1</string>
+    <string name="total_revenues">Total Revenues:</string>
+    <string name="total_revenues_1000">Total Revenues:1000$</string>
+    <string name="store_number_2">STORE NUMBER 2</string>
+    <string name="total_revenues_2000">Total Revenues: 2000$</string>
+    <string name="display_pie_chart">Display Pie Chart</string>
+    <string name="pie_chart_displaying_vendors_sale_in">Pie Chart Displaying Vendors\' Sale (in %)</string>
+    <string name="total_revenues_2500">Total revenues: 2500$</string>
+    <string name="item_5">ITEM 5</string>
+    <string name="total_revenues_3000">Total revenues: 3000$</string>
+    <string name="item_4">ITEM 4</string>
+    <string name="total_revenues_500">Total Revenues: 500$</string>
+    <string name="item_3">ITEM 3</string>
+    <string name="item2">ITEM2</string>
+    <string name="total_revenues_1500">Total Revenues: 1500$</string>
+    <string name="item1">ITEM1</string>
+    <string name="check_vendors_info">CHECK VENDORS INFO</string>
+    <string name="please_click_on_a_vendor_image_to_check_its_information">Please click on a vendor image to check its information</string>
+
+
+    <!--&gt;>>>>>> 6f676e6082c302f14ee5418c33396244dcc5862f-->
+    <string-array name="user_choice">
+        <item>Customer</item>
+        <item>Cook</item>
+        <item>Manager</item>
+    </string-array>
+
+
+    <string name="title_activity_order_details">orderDetails</string>
+    <string name="service_start_time">Service Start Time:</string>
+    <string name="choose_vendor_open_time">Choose Vendor Open Time</string>
+    <string name="enter_vendor_s_name_here">Enter Vendor\'s name here</string>
+    <string name="vendor_s_support_hot_line">Vendor\'s Support Hot Line</string>
+    <string name="vendor_s_owner_mail">Vendor\'s Owner Mail</string>
+    <string name="vendor_s_owner_full_name">Vendor\'s owner full name</string>
+    <string name="brief_description_about_the_vendor">Brief description about the vendor</string>
+    <string name="upload_to_database">Upload to Database</string>
+    <string name="show_uploads">Show Uploads</string>
+
+
+    <string-array name="channel_choice">
+        <item>Modify Request</item>
+        <item>Complete Notification</item>
+    </string-array>
+    <string name="title_activity_add__remove__vendor">Add_Remove_Vendor</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="vendor_s_information">Vendor\'s Information</string>
+    <string name="enter_file_name_here">Enter File Name Here</string>
+    <string name="done">Done</string>
+    <string name="the_vendor_s_official_website">The vendor\'s official website</string>
+    <string name="store">STORE:</string>
+    <string name="store_brand_mockstore">Store Brand:MockStore</string>
+    <string name="store_name">STORE NAME:</string>
+    <string name="opentime">OpenTime:</string>
+    <string name="close_time">Close Time:</string>
+    <string name="hotline">Hotline:</string>
+    <string name="website">Website:</string>
+    <string name="owner_name1">Owner Name</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="sign_in">Sign In</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="hotline_field">Hotline:</string>
+    <string name="_0886673468">0886673468</string>
+</resources>

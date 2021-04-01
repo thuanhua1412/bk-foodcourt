@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="priority">
+        <item>Rất thấp</item>
+        <item>Thấp</item>
+        <item>Trung bình</item>
+        <item>Cao</item>
+        <item>Rất cao</item>
+    </string-array>
+
+    <string-array name="discount_type">
+        <item>Khuyến mãi theo phần trăm</item>
+        <item>Khuyến mãi theo giá</item>
+    </string-array>
+
+    <string-array name="discount_scope">
+        <item>Khuyến mãi đơn hàng</item>
+        <item>Khuyến mãi thực đơn</item>
+        <item>Khuyến mãi danh mục</item>
+        <item>Khuyến mãi món ăn</item>
+    </string-array>
+</resources>

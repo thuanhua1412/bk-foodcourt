@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="store"
+            type="com.example.bk_foodcourt.home.Store" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/store_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_large_size"
+                        android:scaleType="centerCrop"
+                        app:imageUrl="@{store.imageUrl}"
+                        tools:src="@drawable/im_school" />
+
+                    <TextView
+                        android:id="@+id/store_description"
+                        style="@style/textStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_marginEnd="@dimen/base_margin"
+                        android:text="@{store.description}"
+                        android:textColor="@android:color/tab_indicator_text"
+                        android:visibility="@{store.description.empty ? View.GONE : View.VISIBLE}"
+                        tools:text="Tiết kiệm đến 25%. Phù hợp  với nhóm từ 2-4 người. Pizza nướng thơm lừng ..." />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_marginEnd="@dimen/base_margin"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/store_rating"
+                            style="@style/textStyle"
+                            android:layout_width="0dp"
+                            android:layout_marginEnd="@dimen/small_margin"
+                            android:layout_weight="1"
+                            android:drawableStart="@drawable/ic_star"
+                            android:drawablePadding="@dimen/small_margin"
+                            android:gravity="bottom"
+                            app:star_rating="@{store.starRating}"
+                            app:total_rating="@{store.totalRatings}"
+                            tools:text="4.7" />
+
+                        <TextView
+                            android:id="@+id/store_opening_hours"
+                            style="@style/textStyle"
+                            android:layout_width="wrap_content"
+                            android:drawableStart="@drawable/ic_access_time_24"
+                            android:drawablePadding="@dimen/small_margin"
+                            app:close_time="@{store.closeTime}"
+                            app:open_time="@{store.openTime}"
+                            tools:text="7:00 - 21:00" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:drawablePadding="@dimen/small_margin"
+                        android:text="@{store.hotline}"
+                        android:visibility="@{store.hotline.empty ? View.GONE : View.VISIBLE}"
+                        tools:text="@string/telephone" />
+
+                    <TextView
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:drawableStart="@drawable/ic_mail"
+                        android:drawablePadding="@dimen/small_margin"
+                        android:text="@{store.supportEmail}"
+                        android:visibility="@{store.supportEmail.empty ? View.GONE : View.VISIBLE}"
+                        tools:text="@string/marketing" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/discount_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:background="@android:color/white"
+                    android:paddingStart="@dimen/base_margin"
+                    android:paddingTop="@dimen/small_margin"
+                    android:paddingEnd="@dimen/base_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/promotion_item" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/menu_item_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/menu_item" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cart_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/base_margin"
+            android:src="@drawable/ic_shopping_cart_24"
+            android:visibility="gone" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

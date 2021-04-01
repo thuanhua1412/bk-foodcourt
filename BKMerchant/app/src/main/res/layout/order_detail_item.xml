@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="orderItem"
+            type="com.example.bkmerchant.order.OrderItem" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_quantity"
+            style="@style/subHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:quantityText="@{orderItem.quantity}"
+            tools:text="2x" />
+
+        <TextView
+            android:id="@+id/item_name"
+            style="@style/subHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@id/item_quantity"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:layout_toStartOf="@id/item_price"
+            android:layout_toEndOf="@id/item_quantity"
+            android:fontFamily="@font/roboto"
+            android:text="@{orderItem.name}"
+            android:textStyle="bold"
+            tools:text="Ga chien nuoc mam chan nuoc duong tron nuoc tuong tuoi nuoc ngot" />
+
+        <TextView
+            android:id="@+id/item_price"
+            style="@style/subHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@id/item_quantity"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/base_margin"
+            app:priceText="@{orderItem.total}"
+            tools:text="80,000đ" />
+
+        <TextView
+            android:id="@+id/item_option"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/item_name"
+            android:layout_alignStart="@id/item_name"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            app:item_option="@{orderItem.options}"
+            tools:text="Không ớt\nKhông hành" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/item_option"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+
+</layout>

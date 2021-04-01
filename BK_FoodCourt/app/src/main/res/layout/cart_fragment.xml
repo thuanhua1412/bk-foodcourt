@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bk_foodcourt.menu.cart.CartViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/subHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/order_summary"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/small_margin">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/order_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/cart_item" />
+
+                    <TextView
+                        android:id="@+id/subtotal_text"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/order_detail"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:text="@string/subtotal" />
+
+                    <TextView
+                        android:id="@+id/order_subtotal"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/order_detail"
+                        android:layout_alignTop="@id/subtotal_text"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/base_margin"
+                        app:priceText="@{viewModel.subtotal}"
+                        tools:text="240,000đ" />
+
+                    <TextView
+                        android:id="@+id/promotion_text"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/subtotal_text"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_marginBottom="@dimen/small_margin"
+                        android:text="@string/promo"
+                        android:textColor="@color/colorGreen"
+                        android:visibility="@{viewModel.promo==0.0 ? View.GONE : View.VISIBLE}" />
+
+                    <TextView
+                        android:id="@+id/order_promotion"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/order_subtotal"
+                        android:layout_alignTop="@id/promotion_text"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/base_margin"
+                        android:textColor="@color/colorGreen"
+                        android:visibility="@{viewModel.promo==0.0 ? View.GONE : View.VISIBLE}"
+                        app:priceText="@{-viewModel.promo}"
+                        tools:text="-40,000đ" />
+
+                    <TextView
+                        android:id="@+id/fee_text"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/promotion_text"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:text="@string/applicable_fee" />
+
+                    <TextView
+                        android:id="@+id/order_fee"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/order_promotion"
+                        android:layout_alignTop="@id/fee_text"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/base_margin"
+                        app:priceText="@{viewModel.applicableFee}"
+                        tools:text="24,000đ" />
+
+                    <TextView
+                        android:id="@+id/total_text"
+                        style="@style/headerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/fee_text"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/base_margin"
+                        android:layout_marginTop="@dimen/base_margin"
+                        android:text="@string/total"
+                        android:textSize="@dimen/sub_header" />
+
+                    <TextView
+                        android:id="@+id/order_total"
+                        style="@style/subHeaderStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@id/order_fee"
+                        android:layout_alignTop="@id/total_text"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/base_margin"
+                        android:textStyle="bold"
+                        app:priceText="@{viewModel.total}"
+                        tools:text="224,000đ" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/base_margin"
+                android:paddingTop="@dimen/small_margin"
+                android:paddingEnd="@dimen/base_margin"
+                android:paddingBottom="@dimen/small_margin">
+
+                <TextView
+                    style="@style/subHeaderStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/promotion_code"
+                    android:textColor="@android:color/tab_indicator_text"
+                    android:textStyle="bold" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/order_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="textCapCharacters" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/base_margin"
+                android:paddingTop="@dimen/small_margin"
+                android:paddingEnd="@dimen/base_margin"
+                android:paddingBottom="@dimen/small_margin">
+
+                <TextView
+                    style="@style/subHeaderStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/order_type"
+                    android:textColor="@android:color/tab_indicator_text"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/order_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/order_type" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_margin"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/base_margin"
+                android:paddingTop="@dimen/small_margin"
+                android:paddingEnd="@dimen/base_margin"
+                android:paddingBottom="@dimen/small_margin">
+
+                <TextView
+                    style="@style/subHeaderStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/payment_method"
+                    android:textColor="@android:color/tab_indicator_text"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/payment_method"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/payment_method" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/checkout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:background="@drawable/secondary_button_selector"
+                android:paddingStart="@dimen/base_margin"
+                android:paddingEnd="@dimen/base_margin"
+                android:text="@string/checkout"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

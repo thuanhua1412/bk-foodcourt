@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/basilBackground"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@color/basilBackground"
+        >
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_no_image"
+            tools:ignore="VectorDrawableCompat"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/store_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store"
+            android:layout_toEndOf="@id/image_view"
+            android:textColor="@color/headline"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="-97dp"
+            android:layout_toEndOf="@id/store_field"
+            android:gravity="center|center_vertical"
+            android:text="store name"
+            android:textColor="@color/basilTextColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/open_time_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_field"
+            android:layout_toEndOf="@id/image_view"
+            android:text="Open Time:"
+            android:textColor="@color/basilHorizontalLine"/>
+
+        <TextView
+            android:id="@+id/open_time"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_field"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/open_time_field"
+            android:text="6:00PM"
+            android:textColor="@color/basilTextColor"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/close_time_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/open_time"
+            android:layout_toEndOf="@id/image_view"
+            android:layout_marginTop="3dp"
+            android:text="Close time:"
+            android:textColor="@color/basilHorizontalLine"/>
+
+        <TextView
+            android:id="@+id/close_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/open_time"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@id/close_time_field"
+            android:text="10:00 PM"
+            android:textStyle="bold"
+            android:textColor="@color/basilTextColor"/>
+        <TextView
+            android:id="@+id/store_email_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:layout_toEndOf="@id/image_view"
+            android:layout_below="@id/close_time_field"
+            android:textColor="@color/basilHorizontalLine"/>
+        <TextView
+            android:id="@+id/support_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/store_email_field"
+            android:text="thinh.nguyenbk2018@hcmut.edu.vn"
+            android:layout_below="@id/close_time_field"
+            android:textStyle="bold"
+            android:textColor="@color/basilTextColor"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

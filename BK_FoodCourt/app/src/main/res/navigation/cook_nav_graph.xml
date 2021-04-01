@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cook_nav_graph"
+    app:startDestination="@id/cookMenuFragment">
+
+    <fragment
+        android:id="@+id/cookMenuFragment"
+        android:name="com.example.bk_foodcourt.cook.menu.CookMenuFragment"
+        android:label="CookMenuFragment"
+        tools:layout="@layout/cook_menu_fragment">
+        <action
+            android:id="@+id/action_cookMenuFragment_to_cookOrderFragment"
+            app:destination="@id/cookOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cookOrderFragment"
+        android:name="com.example.bk_foodcourt.cook.order.CookOrderFragment"
+        android:label="CookOrderFragment"
+        tools:layout="@layout/cook_order_list_fragment">
+        <action
+            android:id="@+id/action_cookOrderFragment_to_cookOrderDetailFragment"
+            app:destination="@id/cookOrderDetailFragment" />
+        <argument
+            android:name="storeId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cookOrderDetailFragment"
+        android:name="com.example.bk_foodcourt.cook.order.orderDetail.CookOrderDetailFragment"
+        android:label="CookOrderDetailFragment"
+        tools:layout="@layout/cook_order_detail">
+        <argument
+            android:name="order"
+            app:argType="com.example.bk_foodcourt.order.Order" />
+    </fragment>
+</navigation>

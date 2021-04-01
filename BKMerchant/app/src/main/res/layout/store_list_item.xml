@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="store"
+            type="com.example.bkmerchant.storeActivity.Store" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bkmerchant.storeActivity.store.StoreViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:onClick="@{() -> viewModel.openStore(store)}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/base_margin"
+            android:paddingEnd="@dimen/base_margin"
+            android:paddingTop="@dimen/fab_margin"
+            android:paddingBottom="@dimen/fab_margin">
+
+            <ImageView
+                android:id="@+id/store_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{store.imageUrl}" />
+
+            <TextView
+                android:id="@+id/store_name"
+                style="@style/headerStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_toEndOf="@id/store_image"
+                android:text="@{store.name}"
+                tools:text="Domino's Pizza" />
+
+            <TextView
+                android:id="@+id/store_rating"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/store_name"
+                android:layout_alignStart="@id/store_name"
+                android:layout_marginTop="@dimen/small_margin"
+                android:drawableStart="@drawable/ic_star"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="bottom"
+                app:star_rating="@{store.starRating}"
+                app:total_rating="@{store.totalRatings}"
+                tools:text="4.7" />
+
+            <TextView
+                android:id="@+id/store_description"
+                style="@style/textStyle"
+                android:layout_width="match_parent"
+                android:layout_below="@id/store_rating"
+                android:layout_alignStart="@id/store_name"
+                android:layout_marginTop="@dimen/small_margin"
+                android:maxLines="2"
+                android:text="@{store.description}"
+                android:textColor="@android:color/tab_indicator_text"
+                tools:text="Tiết kiệm đến 25%. Phù hợp  với nhóm từ 2-4 người. Pizza nướng thơm lừng ..." />
+
+            <TextView
+                android:id="@+id/default_text"
+                style="@style/subHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/store_description"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{() -> viewModel.setDefaultStore(store.id)}"
+                android:padding="@dimen/small_margin"
+                android:text="@string/set_as_default"
+                android:textColor="@color/colorBlue"
+                android:visibility="@{store.isFocus ? View.GONE : View.VISIBLE}" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

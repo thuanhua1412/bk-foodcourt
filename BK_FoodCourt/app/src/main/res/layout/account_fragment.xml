@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.bk_foodcourt.account.AccountViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="@dimen/large_margin"
+            app:avatarUrl="@{viewModel.user.avatarUrl}"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/titleStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@{viewModel.user.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            tools:text="Bình Lê" />
+
+        <LinearLayout
+            android:id="@+id/account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name">
+
+            <TextView
+                android:id="@+id/update_info"
+                style="@style/subHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/click_selector"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> viewModel.navigateToPersonalInfo()}"
+                android:padding="@dimen/base_margin"
+                android:text="@string/personal_information" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/change_password"
+                style="@style/subHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/click_selector"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:gravity="center_vertical"
+                android:padding="@dimen/base_margin"
+                android:text="@string/change_password" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/account_layout">
+
+            <TextView
+                android:id="@+id/setting"
+                style="@style/subHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/click_selector"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:gravity="center_vertical"
+                android:padding="@dimen/base_margin"
+                android:text="@string/setting" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/term_privacy"
+                style="@style/subHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/click_selector"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:gravity="center_vertical"
+                android:padding="@dimen/base_margin"
+                android:text="@string/term_amp_privacy" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/base_margin"
+                android:layout_marginEnd="@dimen/base_margin"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/about_us"
+                style="@style/subHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/click_selector"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:gravity="center_vertical"
+                android:padding="@dimen/base_margin"
+                android:text="@string/about_us" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/base_margin"
+            android:background="@drawable/primary_button_selector"
+            android:paddingStart="@dimen/base_margin"
+            android:paddingEnd="@dimen/base_margin"
+            android:text="@string/log_out"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/nav_items" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

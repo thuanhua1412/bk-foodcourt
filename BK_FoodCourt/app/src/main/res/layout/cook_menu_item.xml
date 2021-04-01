@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dish"
+            type="com.example.bk_foodcourt.menu.Dish" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bk_foodcourt.cook.menu.CookMenuViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/base_margin"
+        android:paddingEnd="@dimen/base_margin"
+        android:background="@android:color/white">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/dish_image"
+            android:layout_width="@dimen/image_small_size"
+            android:layout_height="@dimen/image_small_size"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:scaleType="fitCenter"
+            app:imageUrl="@{dish.imageUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            tools:src="@drawable/ic_food_default" />
+
+        <TextView
+            android:id="@+id/dish_name"
+            style="@style/headerStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/base_margin"
+            android:maxLines="2"
+            android:text="@{dish.name}"
+            android:textColor="@{dish.availability ? @android:color/black : @android:color/tab_indicator_text}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dish_image"
+            app:layout_constraintTop_toTopOf="@id/dish_image"
+            tools:text="Pizza" />
+
+        <Switch
+            android:id="@+id/dish_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{dish.availability}"
+            android:onClick="@{() -> viewModel.changeDishStatus(dish)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dish_image" />
+
+        <TextView
+            android:id="@+id/dish_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:maxLines="3"
+            android:minLines="2"
+            android:text="@{dish.description}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dish_image"
+            app:layout_constraintTop_toBottomOf="@id/dish_name"
+            tools:text="Description of a dish Description of a dish" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

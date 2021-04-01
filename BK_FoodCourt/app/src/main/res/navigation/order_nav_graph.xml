@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_nav_graph"
+    app:startDestination="@id/orderFragment">
+
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.bk_foodcourt.order.OrderFragment"
+        android:label="OrderFragment"
+        tools:layout="@layout/order_fragment">
+        <action
+            android:id="@+id/action_orderFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.bk_foodcourt.order.orderDetail.OrderDetailFragment"
+        android:label="OrderDetailFragment" >
+        <argument
+            android:name="order"
+            app:argType="com.example.bk_foodcourt.order.Order" />
+        <action
+            android:id="@+id/action_orderDetailFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+    </fragment>
+</navigation>

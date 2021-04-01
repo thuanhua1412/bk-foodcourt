@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_nav_graph"
+    app:startDestination="@id/accountFragment">
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.bk_foodcourt.account.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/account_fragment">
+        <action
+            android:id="@+id/action_accountFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.bk_foodcourt.account.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/about_fragment"/>
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="com.example.bk_foodcourt.account.PersonalInfoFragment"
+        android:label="PersonalInfoFragment"
+        tools:layout="@layout/personal_info_fragment">
+        <argument
+            android:name="user"
+            app:argType="com.example.bk_foodcourt.login.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.example.bk_foodcourt.account.PasswordFragment"
+        android:label="PasswordFragment"
+        tools:layout="@layout/password_fragment"/>
+    <fragment
+        android:id="@+id/termFragment"
+        android:name="com.example.bk_foodcourt.account.TermFragment"
+        android:label="TermFragment"
+        tools:layout="@layout/term_privacy_fragment"/>
+</navigation>

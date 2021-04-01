@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".StatReportActivity">
+
+        <ImageButton
+            android:id="@+id/Vendor_Chart_Button"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/vendor_chart"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vendor__chart"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/vendor__chart"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/vendor_text_button"
+            android:layout_width="393dp"
+            android:layout_height="77dp"
+            android:background="#8BC34A"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_horizontal"
+            android:paddingTop="10sp"
+            android:text="@string/total_revenues_by_vendor"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Item_Chart_Button"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:contentDescription="@string/item_chart"
+            android:src="@drawable/itemchart"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:src="@drawable/itemchart"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/vendor_item_button"
+            android:layout_width="393dp"
+            android:layout_height="77dp"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#8BC34A"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_horizontal"
+            android:paddingTop="10sp"
+            android:text="@string/total_revenue_by_item"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</ScrollView>

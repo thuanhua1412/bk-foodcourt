@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FormTitle"
+            android:text="@string/vendor_information_form" />
+
+        <TextView
+            style="@style/FormFieldAsk"
+            android:text="@string/name" />
+
+        <EditText
+            style="@style/FormEditText"
+            android:autofillHints=""
+            android:hint="@string/enter_vendor_name" />
+
+        <TextView
+            style="@style/FormFieldAsk"
+            android:text="@string/owner_name" />
+
+        <EditText
+            android:id="@+id/VendorNameEditText"
+            style="@style/FormFieldAsk"
+            android:hint="@string/enter_vendor_s_owner_name"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/chooseVendorImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_vendor_image"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/vendorImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/vendorimage" />
+
+        <ProgressBar
+            android:id="@+id/progress_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/myUploadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_image"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/FormFieldAsk"
+            android:text="@string/hot_line" />
+
+        <EditText
+            style="@style/FormEditText"
+            android:autofillHints="no"
+            android:hint="@string/enter_the_vendor_s_suppport_line_here" />
+
+        <TextView
+            style="@style/FormFieldAsk"
+            android:text="@string/open_time" />
+
+        <EditText
+            style="@style/FormEditText"
+            android:autofillHints="no"
+            android:hint="@string/enter_open_time" />
+
+        <TextView
+            style="@style/FormFieldAsk"
+            android:hint="@string/close_time" />
+
+        <EditText
+            style="@style/FormEditText"
+            android:importantForAutofill="no"
+            android:text="@string/enter_vendor_s_close_time"
+            tools:ignore="LabelFor" />
+
+
+    </LinearLayout>
+</ScrollView>
+

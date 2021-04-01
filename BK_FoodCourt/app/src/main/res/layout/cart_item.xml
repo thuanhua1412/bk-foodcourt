@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="cartItem"
+            type="com.example.bk_foodcourt.menu.CartItem" />
+
+        <variable
+            name="viewModel"
+            type="com.example.bk_foodcourt.menu.cart.CartViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/click_selector"
+        android:onClick="@{() -> viewModel.showCartItemDetail(cartItem)}">
+
+        <TextView
+            android:id="@+id/item_quantity"
+            style="@style/subHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:quantityText="@{cartItem.quantity}"
+            tools:text="2x" />
+
+        <TextView
+            android:id="@+id/item_name"
+            style="@style/subHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@id/item_quantity"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:layout_toStartOf="@id/item_price"
+            android:layout_toEndOf="@id/item_quantity"
+            android:fontFamily="@font/roboto"
+            android:text="@{cartItem.name}"
+            android:textStyle="bold"
+            tools:text="Ga chien nuoc mam chan nuoc duong tron nuoc tuong tuoi nuoc ngot" />
+
+        <TextView
+            android:id="@+id/item_price"
+            style="@style/subHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@id/item_quantity"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/base_margin"
+            app:priceText="@{cartItem.total}"
+            tools:text="80,000đ" />
+
+        <TextView
+            android:id="@+id/item_base_price"
+            style="@style/subHeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/item_price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:textColor="@android:color/tab_indicator_text"
+            android:visibility="@{cartItem.total!=cartItem.baseTotal ? View.VISIBLE : View.GONE}"
+            app:strike_price_text="@{cartItem.baseTotal}"
+            tools:text="80,000đ" />
+
+        <TextView
+            android:id="@+id/item_option"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/item_name"
+            android:layout_alignStart="@id/item_name"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:layout_toStartOf="@id/item_price"
+            app:item_option="@{cartItem.options}"
+            tools:text="Không ớt\nKhông hành" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/item_option"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/base_margin"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TotalRevenueItem_StatReport">
+
+    <Button
+        android:id="@+id/display_item_chart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/display_pie_chart"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/vendorID_name"
+                android:text="@string/item1" />
+
+            <ImageView
+                android:id="@+id/item1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/friedchicken" />
+
+            <TextView
+                style="@style/totalRevenues"
+
+                android:text="@string/total_revenues_1500" />
+
+            <TextView
+                style="@style/vendorID_name"
+                android:text="@string/item2" />
+
+            <ImageView
+                android:id="@+id/item2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/coffee" />
+
+            <TextView
+                style="@style/totalRevenues"
+                android:text="@string/total_revenues_2000" />
+            <TextView
+                style="@style/vendorID_name"
+                android:text="@string/item_3"
+                />
+
+            <ImageView
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/icecream" />
+            <TextView
+                style="@style/totalRevenues"
+                android:text="@string/total_revenues_500"/>
+            <TextView
+                style="@style/vendorID_name"
+                android:text="@string/item_4"/>
+
+            <ImageView
+                android:id="@+id/item4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/pizza" />
+            <TextView
+                style="@style/totalRevenues"
+                android:text="@string/total_revenues_3000"/>
+            <TextView
+                style="@style/vendorID_name"
+                android:text="@string/item_5"/>
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/soda" />
+            <TextView
+                style="@style/totalRevenues"
+                android:text="@string/total_revenues_2500"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

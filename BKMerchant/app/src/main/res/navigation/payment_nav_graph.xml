@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_nav_graph"
+    app:startDestination="@id/paymentFragment">
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.bkmerchant.paymentActivity.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/payment_fragment" />
+</navigation>

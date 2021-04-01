@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorSecondary">#fd2627</color>
+    <color name="colorSecondaryLight">#ff5f43</color>
+    <color name="colorSecondaryDark">#b20000</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhiteTransparent">#80ffffff</color>
+    <color name="dark_black">#0b0b0b</color>
+    <color name="headline">#FD5532</color>
+    <color name="basilBackground">#FFFBE6</color>
+    <color name="basilTextColor">#356859</color>
+    <color name="basilFieldBackground">#B9e4C9</color>
+    <color name="basilHorizontalLine">#37966F</color>
+
+    <color name="colorBlue">#009ad4</color>
+    <color name="duskYellow">#FBCF11</color>
+    <color name="button_pressed">#e0e0e0</color>
+    <color name="colorGreen">#54c90b</color>
+</resources>

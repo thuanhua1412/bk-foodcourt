@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/banner" />
+
+    <TextView
+        android:id="@+id/menuTv"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="2dp"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textColor="#43596f"
+        android:textSize="40sp" />
+
+    <ScrollView
+
+        android:id="@+id/myScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/SuonBiQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="50dp"
+                        android:text="0"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.89"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.22000003"
+                        tools:text="0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/comSuonBi_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/com_tam_suon_bi"
+                        app:srcCompat="@drawable/com_tam_suon_bi" />
+
+                    <TextView
+                        android:id="@+id/comSuonBi_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/comSuonBi_photo"
+                        android:text="Cơm Sườn Bì"
+                        android:textColor="@color/dark_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/comSuonBi_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/comSuonBi_textView"
+                        android:layout_toRightOf="@id/comSuonBi_photo"
+                        android:text="VND 25000"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="86dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/comSuonBi_button"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_add"
+                            android:onClick="add_to_list"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+
+                        <Button
+                            android:id="@+id/comSuonBi_button_rm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignBaseline="@+id/comSuonBi_button"
+
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:background="@drawable/ic_sub"
+                            android:onClick="rmv_from_list"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/SuonQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="60dp"
+                        android:text="0"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.89"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.22000003"
+
+                        tools:text="0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="89dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/comSuon_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/com_tam_suon"
+                        app:srcCompat="@drawable/com_tam_suon" />
+
+                    <TextView
+                        android:id="@+id/comSuon_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/comSuon_photo"
+                        android:text="Cơm Sườn"
+                        android:textColor="@color/dark_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/comSuon_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/comSuon_textView"
+                        android:layout_toRightOf="@id/comSuon_photo"
+                        android:text="VND 20000"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="86dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/comSuon_button"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_add"
+                            android:onClick="add_to_list"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/comSuon_button_rm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignBaseline="@+id/comSuon_button"
+
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:background="@drawable/ic_sub"
+                            android:onClick="rmv_from_list"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/SuonChaQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="50dp"
+                        android:text="0"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.89"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.22000003"
+                        tools:text="0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/comSuonCha_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/com_tam_suon_cha"
+                        app:srcCompat="@drawable/com_tam_suon_cha" />
+
+                    <TextView
+                        android:id="@+id/comSuonCha_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/comSuonCha_photo"
+                        android:text="Cơm Sườn Chả"
+                        android:textColor="@color/dark_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/comSuonCha_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/comSuonCha_textView"
+                        android:layout_toRightOf="@id/comSuonCha_photo"
+                        android:text="VND 25000"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="86dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/comSuonCha_button"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_add"
+                            android:onClick="add_to_list"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/comSuonCha_button_rm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignBaseline="@+id/comSuonCha_button"
+
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:background="@drawable/ic_sub"
+                            android:onClick="rmv_from_list"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/SaBiChuongQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="50dp"
+                        android:text="0"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.89"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.22000003"
+                        tools:text="0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/comSaBiChuong_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/com_tam_sa_bi_chuong"
+                        app:srcCompat="@drawable/com_tam_sa_bi_chuong" />
+
+                    <TextView
+                        android:id="@+id/comSaBiChuong_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/comSaBiChuong_photo"
+                        android:text="Sà Bì Chưởng"
+                        android:textColor="@color/dark_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/comSaBiChuong_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/comSaBiChuong_textView"
+                        android:layout_toRightOf="@id/comSaBiChuong_photo"
+                        android:text="VND 30000"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="86dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/comSaBiChuong_button"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_add"
+                            android:onClick="add_to_list"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/comSaBiChuong_button_rm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignBaseline="@+id/comSaBiChuong_button"
+
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:background="@drawable/ic_sub"
+                            android:onClick="rmv_from_list"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/phoVienQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="50dp"
+                        android:text="0"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.89"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.22000003"
+                        tools:text="0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+
+                    <ImageView
+                        android:id="@+id/phoVien_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/pho_bo_vien"
+                        app:srcCompat="@drawable/pho_bo_vien" />
+
+                    <TextView
+                        android:id="@+id/phoVien_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/phoVien_photo"
+                        android:text="Phở Bò Viên"
+                        android:textColor="@color/dark_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+
+                        android:id="@+id/phoVien_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/phoVien_textView"
+                        android:layout_toRightOf="@id/phoVien_photo"
+                        android:text="VND 25000"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="86dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/phoVien_button"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_add"
+                            android:onClick="add_to_list"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/phoVien_button_rm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignBaseline="@+id/phoVien_button"
+
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:background="@drawable/ic_sub"
+                            android:onClick="rmv_from_list"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            >
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/phoTaiQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:paddingLeft="50dp"
+                            android:text="0"
+                            android:textAlignment="gravity"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.89"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.22000003"
+                            tools:text="0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/phoTai_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/pho_tai"
+                        app:srcCompat="@drawable/pho_tai" />
+
+                    <TextView
+                        android:id="@+id/phoTai_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/phoTai_photo"
+                        android:text="Phở Bò Tái"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/phoTai_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/phoTai_textView"
+                        android:layout_toRightOf="@id/phoTai_photo"
+                        android:text="VND 25000"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="86dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/phoTai_button"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_add"
+                            android:onClick="add_to_list"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/phoTai_button_rm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignBaseline="@+id/phoTai_button"
+
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:background="@drawable/ic_sub"
+                            android:onClick="rmv_from_list"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_column="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/phoNamQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="50dp"
+                        android:text="0"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.89"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.22000003"
+                        tools:text="0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/phoNam_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/pho_nam"
+                        app:srcCompat="@drawable/pho_nam" />
+
+                    <TextView
+                        android:id="@+id/phoNam_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/phoNam_photo"
+                        android:text="Phở Nạm Bò"
+                        android:textColor="@color/dark_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+
+                        android:id="@+id/phoNam_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/phoNam_textView"
+                        android:layout_toRightOf="@id/phoNam_photo"
+                        android:text="VND 25000"
+                        android:textColor="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="86dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true">
+
+                        <Button
+                            android:id="@+id/phoNam_button"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/ic_add"
+                            android:onClick="add_to_list"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/phoNam_button_rm"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignBaseline="@+id/phoNam_button"
+
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:background="@drawable/ic_sub"
+                            android:onClick="rmv_from_list"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ea7a66"
+        android:onClick="place_order"
+        android:text="Place Order"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
